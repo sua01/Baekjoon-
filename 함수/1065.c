@@ -1,9 +1,28 @@
-ï»¿// 22-01-26
-// ë°±ì¤€ í•¨ìˆ˜ - 1065ë²ˆ : í•œìˆ˜
+// 22-01-26
+// ¹éÁØ ÇÔ¼ö - 1065¹ø : ÇÑ¼ö
+
 #include <stdio.h>
 
 int main(void)
 {
-	int n;
+	int n, han = 0;
 	scanf("%d", &n);
+	int one, ten, hund;
+
+	if (n < 100) han = n;
+	else if (n > 1000)return 0;
+	else {
+		for (int i = 100; i <= n; i++) {
+			one = i % 10;
+			ten = (i % 100) / 10;
+			hund = i / 100;
+
+			if ((one - ten) == (ten - hund)) {
+				han++;
+			}
+		}
+		han += 99;
+	}
+
+	printf("%d", han);
 }
