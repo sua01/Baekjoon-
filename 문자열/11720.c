@@ -2,16 +2,14 @@
 
 int main()
 {
-	int num, n, a;
-
-	scanf("%d", num);
-	scanf("%d", n);
-
+	int num, n;
 	int sum = 0;
 
-	while (n > 0) {
-		sum += n % 10;
-		n /= 10;
+	scanf("%d", &num);
+
+	for (int i = 0; i < num; i++) {
+		scanf("%1d", &n);
+		sum += n;
 	}
 
 	printf("%d", sum);
