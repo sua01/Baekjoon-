@@ -25,7 +25,7 @@ for i in range(len(alph)):
     if most == alph[i]:
         n+=1
 
-if(index != 0):
+if(n < 2):
     print(chr(index+65))
 else:
      print("?")
