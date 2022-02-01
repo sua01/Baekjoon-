@@ -13,3 +13,8 @@ else:
             cnt+=1
 
 print(cnt)
+
+
+#더 좋은 풀이! split()은 공백이 여러개라도 1개로 처리한다.
+#word = input()
+#print(len(word.split()))
