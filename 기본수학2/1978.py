@@ -7,10 +7,10 @@ num = map(int, input().split())
 cnt=0
 
 for i in num: 
-    for j in range(2, i):
+    for j in range(2, i+1):
         if i % j == 0 :
-            cnt+=1
-            continue
+            if j == i:
+                cnt+=1
+            break
 
-
-print(n - cnt)
+print(cnt)
