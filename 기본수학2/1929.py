@@ -13,5 +13,3 @@ for i in range(m, n+1):
             break
 
     else : print(i)  # 소수인 경우
-
-    

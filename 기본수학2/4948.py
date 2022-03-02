@@ -1,16 +1,13 @@
 # 백준 재귀 : 4948번 - 베르트랑 공준
 
-import math
+N = 123456*2+1
+#에라토스테네스의 체, True이면 소수, False이면 소수 아님
+num = [True]*N
+for i in range(2, int(N**0.5)+1):
+  if num[i]==True:
+    for j in range(2*i, N, i):
+      num[j] = False
 
-def sosu(n):
-  if n ==  1: return False
-  for i in range(2, int(math.sqrt(n))+1):
-      if n % i == 0:
-        return False
-  return True
-
-
-n = 123456
 
 while True:
   n = int(input())
@@ -19,6 +16,6 @@ while True:
 
   cnt=0
   for i in range(n+1, 2*n+1):
-    if sosu(i): cnt+=1
+    if num[i]: cnt+=1 #소수 개수 세기
 
   print(cnt)
