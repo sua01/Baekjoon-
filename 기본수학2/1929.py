@@ -1,4 +1,4 @@
-# 백준 재귀 : 1929번 - 소수 구하기
+# 백준 기본수학2 : 1929번 - 소수 구하기
 import math
 
 m, n = map(int, input().split())
