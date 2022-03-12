@@ -2,7 +2,7 @@
 
 lans=[215,513,712,803]
 
-start = 1
+start = 0
 end = max(lans)
 target = 10
 
