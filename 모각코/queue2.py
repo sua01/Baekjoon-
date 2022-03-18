@@ -43,6 +43,7 @@ queue = Queue()
 queue.init()
 id_list=[]
 
+# 입력받기
 for _ in range(7):
   id, min = input().split()
   id_list.append(id)
@@ -50,17 +51,25 @@ for _ in range(7):
 
 task=0
 total=0
+start=0
+id_num=0
+MAX_TIME = 50
 
-while (queue.is_empty()):
-  if task<=50:
-    task += queue.dequeue()
-    total+=task
-    print(total)
+while (queue.is_empty()==False):
+  next_task = int(queue.dequeue())
+
+  if task+next_task <=MAX_TIME:
+    task += next_task
+    id_num+=1
 
   else:
-    task = 0
-    total+=10
-    print(total)
-
-
-
+    total += (task +10)
+    task = next_task
+    
+    print(id_list[start:id_num])
+    
+    start=id_num
+    id_num+=1
+  
+print(id_list[start:id_num])
+print(f'총 소요시간 : {total+task}분')
