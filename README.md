@@ -13,5 +13,7 @@
     <li>소수 구하기 - 에라토스테네스의 체 prime number</li>
     <li>슬라이딩 위도우 Sliding Window</li>
     <li>큐 Queue</li>
+    <li>Linked List</li>
+    <li>트리 tree</li>
   </ul>
 </ul>
