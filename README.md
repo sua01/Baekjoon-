@@ -17,5 +17,6 @@
     <li>트리 tree</li>
     <li>이진 탐색 트리 binary search tree</li>
     <li>우선순위 큐 priority queue</li>
+    <li>그래프</li>
   </ul>
 </ul>
