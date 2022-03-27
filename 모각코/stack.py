@@ -1,55 +1,28 @@
-# 유효한 괄호 쌍 판정하기
+# 백준 10828
 
-# 스택 사용
-class Stack:
-  def init(self):
-    self.arr=[None]*10
-    self.top = -1
+import sys
+n = int(sys.stdin.readline())
 
-  def is_empty(self):
-    if self.top == -1:
-      return True
-    else: return False
+stack=[]
+for i in range(n):
+  command = sys.stdin.readline().split()
 
-  def push(self, val):
-    self.top+=1
-    self.arr[self.top] = val
-
-  def pop(self):
-    if self.is_empty():
-        return
+  if command[0]=='push':
+    stack.append(command[1])
+  elif command[0]=='pop':
+    if len(stack)==0:
+        print(-1)
     else:
-      val = self.arr[self.top]
-      self.top-=1
-      return val
-
-# 괄호 유효한지 판정
-def validate_brace_pair(brace):
-  stack = Stack()
-  stack.init()
-
-  for i in brace:
-    stack.push(i)
-  
-  if stack.pop()=="{":
-    print("유효하지 않은 중괄호 쌍입니다.")
-  else:
-    left = 0
-    right = 1
-
-    for _ in range(len(brace)-1):
-      if stack.pop()=="}":
-        right+=1
-      else:
-        left+=1
-    
-    if left==right:
-      print("유효한 중괄호 쌍입니다.")
+        print(stack.pop())
+  elif command[0] == 'size':
+    print(len(stack))
+  elif command[0] == 'empty':
+    if len(stack)==0:
+        print(1)
     else:
-      print("유효하지 않은 중괄호 쌍입니다.")
-
-
-validate_brace_pair("{{}}{}")
-validate_brace_pair("{{}")
-validate_brace_pair("{{{}}}")
-validate_brace_pair("}{{{}}}{")
+        print(0)
+  elif command[0] == 'top':
+    if len(stack)==0:
+        print(-1)
+    else:
+        print(stack[-1])
