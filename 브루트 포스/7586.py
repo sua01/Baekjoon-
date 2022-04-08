@@ -18,6 +18,7 @@ for i in range(n):
       rank+=1
   rank_list.append(rank+1)
 
+# 등수 출력
 for i in rank_list:
   print(i, end=' ')
 
