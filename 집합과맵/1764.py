@@ -2,12 +2,21 @@
 
 n, m = map(int, input().split())
 
-# 듣도 못한 사람 이름 입력
-names1 = []
+# 딕셔너리에 듣도 못한 사람의 이름, 수 입력받기
+names = {}
 for i in range(n):
-  names1.append(input())
+    name = input()
+    names[name] = 1
 
-# 보도 못한 사람 이름 입력
-names2 = []
-for i in range(m):
-  names2.append(input())
+ans = []
+for j in range(m):
+    name = input()
+    if names.get(name) == None:  
+        continue
+    else: # 딕셔너리에 있는 이름일 경우 듣보잡
+        ans.append(name)
+
+# 결과 출력
+print(len(ans))
+for answer in ans:
+    print(answer)
