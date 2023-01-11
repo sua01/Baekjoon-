@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "929420b8-d724-4724-8176-8795db64addf": {
+      "ProjectGuid": "929420b8-d724-4724-8176-8795db64addf",
+      "DisplayName": "infixTopostfix",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
